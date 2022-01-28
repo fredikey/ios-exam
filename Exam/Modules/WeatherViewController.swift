@@ -97,8 +97,7 @@ extension WeatherViewController: UITableViewDataSource, UITableViewDelegate {
         
         let rowModel = viewModel.sections[indexPath.section].rows[indexPath.row]
         
-        cell.textLabel?.text = rowModel.title
-        cell.detailTextLabel?.text = rowModel.data
+        cell.textLabel?.text = rowModel.title + " " + rowModel.data
         
         return cell
     }
