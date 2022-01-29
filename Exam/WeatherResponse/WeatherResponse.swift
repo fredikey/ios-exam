@@ -8,15 +8,17 @@
 import Foundation
 
 struct WeatherRootResponse: Codable {
-    
+
     enum CodingKeys: String, CodingKey {
         case info = "main"
         case name
+        case clouds
     }
-    
+
     var info: WeatherInfo
     var name: String
-    
+    var clouds: WeatherClouds
+
     struct WeatherInfo: Codable {
         enum CodingKeys: String, CodingKey {
             case temp
@@ -34,8 +36,13 @@ struct WeatherRootResponse: Codable {
         var pressure: Int
         var humidity: Int
     }
-}
 
+    struct WeatherClouds: Codable {
+        var all: Int
+    }
+
+
+}
 
 
 

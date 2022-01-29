@@ -16,6 +16,12 @@ struct WeatherSection {
 }
 
 struct WeatherRow {
-    var title: String
-    var data: String
+    var locationName: String
+    var temp: Int
+    var feelsLike: Int
+    var tempMin: Int
+    var tempMax: Int
+    var pressure: Int
+    var humidity: Int
+    var clouds: Int
 }
