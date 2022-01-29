@@ -55,7 +55,11 @@ final class WeatherViewController: UIViewController {
 
 
     func searchCity(for cityName: String) {
-        networkService.getWeather(for: cityName) { result in
+        networkService.getWeather(for: cityName) { [weak self] result in
+            guard let self = self else {
+                return
+            }
+            
             switch result {
             case .success(let model):
                 self.viewModel = self.weatherViewModelFactory.viewModel(from: model)
@@ -65,11 +69,18 @@ final class WeatherViewController: UIViewController {
             case .failure(let error):
                 print(error)
                 // READY: обработать свои ошибки, отобразить UIAlertController
-                let alert = UIAlertController(title: "Ошибка", message: error.description, preferredStyle: .alert)
-
-                self.present(alert, animated: true, completion: nil)
-
+                self.handleErrroWithAlert(error)
             }
+        }
+    }
+        
+    private func handleErrroWithAlert(_ error: NetworkService.NetworkErrors) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Ошибка", message: error.description, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(okAction)
+            
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }
