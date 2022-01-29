@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3155466E27A52FEE00AAB0D4 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155466D27A52FEE00AAB0D4 /* WeatherResponse.swift */; };
 		7E5B1CCA27A488860094B49D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B1CC927A488860094B49D /* AppDelegate.swift */; };
 		7E5B1CCC27A488860094B49D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B1CCB27A488860094B49D /* SceneDelegate.swift */; };
 		7E5B1CCE27A488860094B49D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B1CCD27A488860094B49D /* WeatherViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3155466D27A52FEE00AAB0D4 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		7E5B1CC627A488860094B49D /* Exam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5B1CC927A488860094B49D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E5B1CCB27A488860094B49D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3155466C27A52FCA00AAB0D4 /* WeatherResponse */ = {
+			isa = PBXGroup;
+			children = (
+				3155466D27A52FEE00AAB0D4 /* WeatherResponse.swift */,
+			);
+			path = WeatherResponse;
+			sourceTree = "<group>";
+		};
 		7E5B1CBD27A488860094B49D = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +75,7 @@
 				7E5B1CE427A49B630094B49D /* App */,
 				7E5B1CE527A49B6C0094B49D /* Modules */,
 				7E5B1CE327A49B590094B49D /* Resources */,
+				3155466C27A52FCA00AAB0D4 /* WeatherResponse */,
 				7E5B1CE627A49B770094B49D /* Services */,
 				7E5B1CD727A488870094B49D /* Info.plist */,
 			);
@@ -182,6 +193,7 @@
 				7E5B1CE227A49A510094B49D /* WeatherViewModelFactory.swift in Sources */,
 				7E5B1CE027A4982E0094B49D /* ViewModel.swift in Sources */,
 				7E5B1CCE27A488860094B49D /* WeatherViewController.swift in Sources */,
+				3155466E27A52FEE00AAB0D4 /* WeatherResponse.swift in Sources */,
 				7E5B1CCA27A488860094B49D /* AppDelegate.swift in Sources */,
 				7E5B1CDE27A48B860094B49D /* NetworkService.swift in Sources */,
 				7E5B1CCC27A488860094B49D /* SceneDelegate.swift in Sources */,
